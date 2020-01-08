@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		8D6991952089804900CEA873 /* Macpro */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Macpro; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6991982089804900CEA873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D69919F2089A9CB00CEA873 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		8D6991A02089AA2400CEA873 /* Prom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prom.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				8D6991982089804900CEA873 /* main.m */,
+				8D69919F2089A9CB00CEA873 /* List.h */,
+				8D6991A02089AA2400CEA873 /* Prom.h */,
 			);
 			path = Macpro;
 			sourceTree = "<group>";
