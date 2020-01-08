@@ -38,14 +38,11 @@ ListElemt* runningPro(){
     
     struct kinfo_proc * process = NULL;
     struct kinfo_proc * newprocess = NULL;
-    do
-    {
+    do{
         size += size / 10;
         newprocess = realloc(process, size);
-        if (!newprocess)
-        {
-            if (process)
-            {
+        if (!newprocess){
+            if (process){
                 free(process);
                 process = NULL;
             }
@@ -55,25 +52,18 @@ ListElemt* runningPro(){
         st = sysctl(mib, (int)miblen, process, &size, NULL, 0);
     } while (st == -1 && errno == ENOMEM);
     
-    if (st == 0)
-    {
-        if (size % sizeof(struct kinfo_proc) == 0)
-        {
+    if (st == 0){
+        if (size % sizeof(struct kinfo_proc) == 0){
             int nprocess =(int) size / sizeof(struct kinfo_proc);
-            if (nprocess)
-            {
-                
-                for (int i = nprocess - 1; i >= 0; i--)
-                {
+            if (nprocess){
+                for (int i = nprocess - 1; i >= 0; i--){
                     list->Pid = process[i].kp_proc.p_pid;
                     list->Pname = process[i].kp_proc.p_comm;
                     list = addElemt(list);
-                    
                 }
                 
                 free(process);
                 process = NULL;
-                
             }
         }
     }
